@@ -9,7 +9,7 @@ module.exports = {
           myGreen: '#5b8266',
           myPink: '#eb9486',
           myCoral: '#fc814a',
-          myOrange: '#ffb140'
+          myOrange: '#ffb140',
         },
         fontFamily: {
             myFont:['"Geologica"', 'sans-serif'],
