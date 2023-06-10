@@ -8,6 +8,7 @@ button.addEventListener('click', () => {
     body.className = 'font-myFont ';
     let random = Math.floor(Math.random()*(colors.length));
     body.classList.add(colors[random]);
+    
     if (colors[random] === 'by-myRed') {
         color.innerHTML = '';
         color.innerHTML = 'Red';
