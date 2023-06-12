@@ -21,8 +21,17 @@
             </li>
         </ul>
     </nav>
-    <section class=" h-555 flex justify-center items-center">
-        <div class=" flex flex-col items-center">
+    <section class=" h-555 flex flex-col justify-center items-center">
+        <div class="flex flex-col justify-center items-center bg-stone-300 p-16 rounded-lg ">
+            <h1 class="mb-5 text-4xl font-bold">Counter</h1>
+            <h1 id="number" class="mb-5 text-6xl font-bold text-emerald-800 ">3</h1>
+            <div class="flex gap-2 text-white">
+                <button id="decrease" class="bg-myRed px-5 py-3 rounded-md">DECREASE</button>
+                <button id="reset" class=" bg-myCoral px-5 py-3 rounded-md ">RESET</button>
+                <button id="increase" class=" bg-myGreen px-5 py-3 rounded-md">INCREASE</button>
+            </div>
+        </div>
+        <div class=" flex flex-col items-center mt-10">
             <div class=" bg-black text-white ps-4 pe-4 pt-2 pb-2 rounded-lg">Background Color: <span class="color">white</span></div>
             <button id="button" type="submit" class=" mt-6 rounded-sm border w-fit pt-2 pb-2 ps-4 pe-4">CLICK ME</button>
         </div>

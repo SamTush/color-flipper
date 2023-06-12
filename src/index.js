@@ -1,6 +1,11 @@
 const button = document.querySelector('#button');
 const color = document.querySelector('.color');
 const body = document.querySelector('body');
+const decrease = document.querySelector('#decrease');
+const reset = document.querySelector('#reset');
+const increase = document.querySelector('#increase');
+const number = document.querySelector('#number');
+
 
 let colors = ['bg-myRed', 'bg-myBlack', 'bg-myGreen', 'bg-myPink', 'bg-myCoral', 'bg-myOrange']
 
@@ -28,4 +33,29 @@ button.addEventListener('click', () => {
         color.innerHTML = '';
         color.innerHTML = 'Orange';
     }
+});
+
+
+
+decrease.addEventListener('click', () => {
+    let currentNumber = Number(number.innerHTML); 
+    currentNumber -= 1;
+
+    console.log(currentNumber);
+    number.innerHTML = ``;
+    number.innerHTML += currentNumber;
+});
+
+reset.addEventListener('click', () => {
+    number.innerHTML = ``;
+    number.innerHTML = 0;
+});
+
+increase.addEventListener('click', () => {
+    let currentNumber = Number(number.innerHTML); 
+    currentNumber += 1;
+
+    console.log(currentNumber);
+    number.innerHTML = ``;
+    number.innerHTML += currentNumber;
 });
