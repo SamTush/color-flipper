@@ -12,7 +12,7 @@ const randomUser = [
         Job: 'web developer',
         img: 'https://cdn-icons-png.flaticon.com/512/219/219983.png',
         text:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum a provident quod facere quos, architecto fuga non officiis nobis suscipit neque et sunt delectus aut incidunt beatae nemo magni facilis Perferendis excepturi dignissimos impedit totam pariatur id praesentium non ad a tempore error veritatis quibusdam, repellendus voluptatibus nobis! Totam blanditiis sit in dolore non corrupti reiciendis fugiat nesciunt ut odit?',
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum a provident quod facere quos, architecto fuga non officiis nobis suscipit neque et sunt delectus aut incidunt beatae nemo magni facilis Perferendis excepturi dignissimos impedit totam pariatur id praesentium non ad a tempore error veritati blanditiis sit in dolore non corrupti reiciendis fugiat nesciunt ut odit?',
     },
     {
         id: 2,
@@ -28,7 +28,7 @@ const randomUser = [
         Job: 'web developer',
         img: 'https://cdn-icons-png.flaticon.com/512/219/219983.png',
         text:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum a provident quod facere quos, architecto fuga non officiis nobis suscipit neque et sunt delectus aut incidunt beatae nemo magni facilis Perferendis excepturi dignissimos impedit totam pariatur id praesentium non ad a tempore error veritatis quibusdam, repellendus voluptatibus nobis! Totam blanditiis sit in dolore non corrupti reiciendis fugiat nesciunt ut odit?',
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum a provident quod facere quos, architecto fuga non dignissimos impedit totam pariatur id praesentium non ad a tempore error veritatis quibusdam, repellendus voluptatibus nobis! Totam blanditiis sit in dolore non corrupti reiciendis fugiat nesciunt ut odit?',
     }
 ];
 
@@ -37,10 +37,10 @@ clickLeft.addEventListener('click', () => {
 
     let user = randomUser[number];
 
-    userImage.innerHTML = user.img;
-    userName.innerHTML = `${userName}`;
-    userJob.innerHTML = userJob;
-    userText.innerHTML = userText;
+    userImage.src = user.img;
+    userName.textContent = user.name;
+    userJob.textContent = user.Job;
+    userText.textContent = user.text;
 });
 
 clickRight.addEventListener('click', () => {
