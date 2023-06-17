@@ -1,61 +1,48 @@
-const button = document.querySelector('#button');
-const color = document.querySelector('.color');
-const body = document.querySelector('body');
-const decrease = document.querySelector('#decrease');
-const reset = document.querySelector('#reset');
-const increase = document.querySelector('#increase');
-const number = document.querySelector('#number');
+const clickLeft = document.querySelector('#left');
+const clickRight = document.querySelector('#right');
+const userImage = document.querySelector('#image');
+const userName = document.querySelector('#name');
+const userJob = document.querySelector('#job');
+const userText = document.querySelector('#text');
 
-
-let colors = ['bg-myRed', 'bg-myBlack', 'bg-myGreen', 'bg-myPink', 'bg-myCoral', 'bg-myOrange']
-
-button.addEventListener('click', () => {
-    body.className = 'font-myFont ';
-    let random = Math.floor(Math.random()*(colors.length));
-    body.classList.add(colors[random]);
-    
-    if (colors[random] === 'by-myRed') {
-        color.innerHTML = '';
-        color.innerHTML = 'Red';
-    } else if (colors[random] === 'bg-myBlack') {
-        color.innerHTML = '';
-        color.innerHTML = 'Night';
-    } else if ( colors[random] === 'bg-myGreen') {
-        color.innerHTML = '';
-        color.innerHTML = 'Green';
-    } else if ( colors[random] === 'bg-myPink') {
-        color.innerHTML = '';
-        color.innerHTML = 'Pink';
-    } else if ( colors[random] === 'bg-myCoral') {
-        color.innerHTML = '';
-        color.innerHTML = 'Coral';
-    } else {
-        color.innerHTML = '';
-        color.innerHTML = 'Orange';
+const randomUser = [
+    {
+        id: 1,
+        name: 'Susan Smith',
+        Job: 'web developer',
+        img: 'https://cdn-icons-png.flaticon.com/512/219/219983.png',
+        text:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum a provident quod facere quos, architecto fuga non officiis nobis suscipit neque et sunt delectus aut incidunt beatae nemo magni facilis Perferendis excepturi dignissimos impedit totam pariatur id praesentium non ad a tempore error veritatis quibusdam, repellendus voluptatibus nobis! Totam blanditiis sit in dolore non corrupti reiciendis fugiat nesciunt ut odit?',
+    },
+    {
+        id: 2,
+        name: 'Susan',
+        Job: 'developer',
+        img: 'https://cdn-icons-png.flaticon.com/512/219/219983.png',
+        text:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum a provident quod facere quos, architecto fuga non officiis nobis suscipit neque et sunt delectus aut incidunt beatae nemo magni facilis Perferendis excepturi dignissimos impedit totam pariatur id praesentium non ad a tempore error veritatis quibusdam, repellendus voluptatibus nobis! Totam blanditiis sit in dolore non corrupti reiciendis fugiat nesciunt ut odit?',
+    },
+    {
+        id: 3,
+        name: 'Smith',
+        Job: 'web developer',
+        img: 'https://cdn-icons-png.flaticon.com/512/219/219983.png',
+        text:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum a provident quod facere quos, architecto fuga non officiis nobis suscipit neque et sunt delectus aut incidunt beatae nemo magni facilis Perferendis excepturi dignissimos impedit totam pariatur id praesentium non ad a tempore error veritatis quibusdam, repellendus voluptatibus nobis! Totam blanditiis sit in dolore non corrupti reiciendis fugiat nesciunt ut odit?',
     }
+];
+
+clickLeft.addEventListener('click', () => {
+    let number = Math.floor(Math.random()*3);
+
+    let user = randomUser[number];
+
+    userImage.innerHTML = user.img;
+    userName.innerHTML = `${userName}`;
+    userJob.innerHTML = userJob;
+    userText.innerHTML = userText;
 });
 
-
-
-decrease.addEventListener('click', () => {
-    let currentNumber = Number(number.innerHTML); 
-    currentNumber -= 1;
-
-    console.log(currentNumber);
-    number.innerHTML = ``;
-    number.innerHTML += currentNumber;
-});
-
-reset.addEventListener('click', () => {
-    number.innerHTML = ``;
-    number.innerHTML = 0;
-});
-
-increase.addEventListener('click', () => {
-    let currentNumber = Number(number.innerHTML); 
-    currentNumber += 1;
-
-    console.log(currentNumber);
-    number.innerHTML = ``;
-    number.innerHTML += currentNumber;
-});
+clickRight.addEventListener('click', () => {
+    console.log('clicked again');
+})
